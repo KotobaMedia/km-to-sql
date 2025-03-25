@@ -3,7 +3,7 @@ name = "km-to-sql"
 description = "Helpers and shared logic for KotobaMedia to-sql tools"
 authors = ["Keita Kobayashi <keita@kotobamedia.com>"]
 repository = "https://github.com/KotobaMedia/km-to-sql"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT"
 
