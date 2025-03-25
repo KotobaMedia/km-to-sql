@@ -1,0 +1,21 @@
+{
+    "name": "example_table",
+    "desc": "An example table",
+    "source": "example_source",
+    "source_url": "https://example.com/source",
+    "license": "MIT",
+    "license_url": "https://example.com/license",
+    "primary_key": "id",
+    "columns": [
+        {
+            "name": "id",
+            "desc": "The primary key",
+            "data_type": "integer"
+        },
+        {
+            "name": "name",
+            "desc": "The name of the entity",
+            "data_type": "string"
+        }
+    ]
+}
