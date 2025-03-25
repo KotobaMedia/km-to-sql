@@ -3,12 +3,14 @@ use tokio_postgres::types::Json;
 
 const INIT_SQL: &str = include_str!("./postgres_schema.sql");
 
+/// Initialize the schema in the database.
 pub async fn init_schema(client: &tokio_postgres::Client) -> Result<()> {
     // Execute the SQL commands to create the schema
     client.batch_execute(INIT_SQL).await?;
     Ok(())
 }
 
+/// Insert or update metadata for a table.
 pub async fn upsert(
     client: &tokio_postgres::Client,
     table: &str,
@@ -33,6 +35,9 @@ pub async fn upsert(
     Ok(())
 }
 
+/// Get metadata for a list of tables.
+///
+/// Returns a vector of tuples containing the table name and its metadata.
 pub async fn get(
     client: &tokio_postgres::Client,
     table: &[&str],

@@ -4,5 +4,7 @@ Shared helpers for KotobaMedia `to-sql` projects.
 
 ## Includes:
 
-* Metadata JSON types
+* Metadata types (`metadata::TableMetadata`)
+    * Conforms to `serde::{Serialize, Deserialize}`
 * Metadata (`datasets`) table schema and creation helpers
+    * PostgreSQL: `postgres::{init_schema, upsert, get}`
